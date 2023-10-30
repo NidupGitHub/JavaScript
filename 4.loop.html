@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+     <h3 class="text-center p-4">Loops in JavaScript</h3>
+    <div class="container">
+        <div class="row text-center p-3 bg-black">
+            <div class="col text-light">
+                <p id="demo1"></p>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-light" onclick="forLoop()"><b>for</b> Loop</button>
+            </div>
+        </div>
+        <div class="row text-center p-3 bg-black">
+            <div class="col text-light">
+                <p id="demo2"></p>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-light" onclick="forInLoop()"><b>for-in</b> Loop</button>
+            </div>
+        </div>
+        <div class="row text-center p-3 bg-black">
+            <div class="col text-light">
+                <p id="demo3"></p>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-light" onclick="forOfLoop()"><b>for-of</b> Loop</button>
+            </div>
+        </div>
+        <div class="row text-center p-3 bg-black">
+            <div class="col text-light">
+                <p id="demo4"></p>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-light" onclick="whileLoop()"><b>while</b> Loop</button>
+            </div>
+        </div>
+        <div class="row text-center p-3 bg-black">
+            <div class="col text-light">
+                <p id="demo5"></p>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-outline-light" onclick="doWhileLoop()"><b>do-while</b> Loop</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function forLoop() {
+            let text = "";
+            for (let i = 0; i < 5; i++) {
+                text += "The number is " + i + "<br>";
+            }
+            document.getElementById('demo1').innerHTML = text;
+        }
+
+        function forInLoop() {
+            const person = { fname: "Jhon", lname: "Doe", age: 25 };
+            let text = "";
+            for (let x in person) {
+                text += person[x] + " ";
+            }
+            document.getElementById('demo2').innerHTML = text;
+        }
+
+        function forOfLoop() {
+            const heroes = ["Batman", "Spider Man", "Mother Teresa", "Thor"];
+            let text = "";
+            for (let x of heroes) {
+                text += x + "<br>";
+            }
+            document.getElementById('demo3').innerHTML = text;
+        }
+
+        function whileLoop() {
+            let text = "";
+            let i = 1;
+            while (i <= 5) {
+                text += "The number is " + i * 2 + "<br>";
+                i++;
+            }
+            document.getElementById('demo4').innerHTML = text;
+        }
+
+        function doWhileLoop() {
+            let text = "";
+            let i = 1;
+            do {
+                text += "The number is " + i * 3 + "<br>";
+                i++;
+            } while (i <= 5);
+            document.getElementById('demo5').innerHTML = text;
+        }   
+    </script>
+</body> 
+</body>
+</html>

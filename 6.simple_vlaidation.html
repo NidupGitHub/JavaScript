@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <h5>Simple Validation using JS</h5>
+    <p>Pease input a number between 1 and 10:</p>
+    <input id="numb" />
+    <button type="button" onclick="myfunction()">Submit</button>
+    <p id="demo"></p>
+
+    <script>
+      function myfunction() {
+        //Get the value of the input filed with id="numb"
+        let x = document.getElementById("numb").value;
+        // if x is Not a Number or less than one or greater than 10
+        let text;
+        if (isNaN(x) || x < 1 || x > 10) {
+          text = "Input not Valid";
+        } else {
+          text = "Input OK";
+        }
+        document.getElementById("demo").innerHTML = text;
+      }
+    </script>
+  </body>
+</html>
